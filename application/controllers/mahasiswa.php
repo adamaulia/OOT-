@@ -1,0 +1,173 @@
+<?php if (! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Mahasiswa extends CI_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        if (!$this->is_logged_in()) 
+        {
+            redirect('login');
+        }
+        $this->load->model('fileModel');
+    }
+    
+    private function is_logged_in()
+    {
+        return $this->session->userdata('is_logged_in');
+    }
+    
+    public function index()
+    {
+        //$data = json_encode($dorm);
+        $this->load->view('mahasiswa');
+                
+    }
+
+    public function addTicket()
+    {
+        sleep(1);
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('Jenis', 'Jenis', 'required|max_length[13]');
+        $this->form_validation->set_rules('Deskripsi', 'Deskripsi', 'required|max_length[32]');
+        $this->form_validation->set_rules('Lampiran', 'Lampiran', 'required|max_length[100]');
+        $this->form_validation->set_rules('title', 'title', 'required|max_length[100]');
+        
+        if ($this->form_validation->run() == FALSE) 
+        {
+            $message = "<strong>Adding</strong> failed!";
+            $this->json_response(FALSE, $message);
+        } 
+        else 
+        {
+            $is_added = $this->ticketModel->add(
+                $this->input->post('Jenis'), 
+                $this->input->post('Deskripsi'), 
+                $this->input->post('Lampiran'),
+                $this->input->post('title')
+            );
+            
+            if ($is_added) 
+            {
+                $message = "Ticket Nomor : <strong> ".$this->input->post('Nomor')."</strong> berhasil diapply !";
+                $this->json_response(TRUE, $message);
+            } 
+            else 
+            {
+                $message = "Ticket Nomor : <strong> ".$this->input->post('Nomor')."</strong> sudah ada !";
+                $this->json_response(FALSE, $message);
+            }
+        }
+    }
+    
+    
+    public function editTicket()
+    {
+        sleep(1);
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('Jenis', 'Jenis', 'required|max_length[13]');
+        $this->form_validation->set_rules('Keterangan', 'Keterangan', 'required|max_length[21]');
+        $this->form_validation->set_rules('Attachment', 'Attachment', 'required|max_length[21]');
+        
+        if ($this->form_validation->run() == FALSE) 
+        {
+            $message = "<strong>Editing</strong> gagal!";
+            $this->json_response(FALSE, $message);
+        } 
+        else 
+        {
+            //$is_added = $this->ticketModel->update(
+                
+            //);
+            
+            if ($is_added) 
+            {
+                $message = "ticket Nomor : <strong> ".$this->input->post('ticketid')."</strong> berhasil ditambahkan !";
+                $this->json_response(TRUE, $message);
+            } 
+            else 
+            {
+                $message = "ticket Nomor : <strong> ".$this->input->post('ticketid')."</strong> Edit Error, silahkan cek data anda !";
+                $this->json_response(FALSE, $message);
+            }
+        }
+    }
+
+    public function files()
+    {
+        $files = $this->fileModel->get_files();
+        $this->load->view('files', array('files' => $files));
+    }
+    
+    public function delete_file($file_id)
+    {
+        if ($this->fileModel->delete_file($file_id))
+        {
+            $status = 'success';
+            $msg = 'File successfully deleted';
+        }
+        else
+        {
+            $status = 'error';
+            $msg = 'Something went wrong when deleteing the file, please try again';
+        }
+        echo json_encode(array('status' => $status, 'msg' => $msg));
+    }
+    
+    public function upload_file()
+    {
+        $status = "";
+        $msg = "";
+        $file_element_name = 'userfile';
+        $userid = $this->session->userdata('userid');
+
+        if (empty($_POST['title']))
+        {
+            $status = "error";
+            $msg = "nama file masih kosong";
+        }
+        
+        if ($status != "error")
+        {
+            $config['upload_path'] = './files/';
+            $config['allowed_types'] = 'gif|jpg|png|doc|txt';
+            $config['max_size'] = 1024 * 8;
+            $config['encrypt_name'] = FALSE;
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload($file_element_name))
+            {
+                $status = 'error';
+                $msg = $this->upload->display_errors('', '');
+            }
+            else
+            {
+                $data = $this->upload->data();
+                $file_id = $this->fileModel->insert_file($data['file_name'], $_POST['title'], $userid);
+                if($file_id)
+                {
+                    $status = "success";
+                    $msg = "File berhasil di unggah";
+                }
+                else
+                {
+                    unlink($data['full_path']);
+                    $status = "error";
+                    $msg = "terdapat error dalam pengunggahan file";
+                }
+            }
+            @unlink($_FILES[$file_element_name]);
+        }
+        echo json_encode(array('status' => $status, 'msg' => $msg));
+    }
+    
+    private function json_response($successful, $message){
+        echo json_encode(array(
+            'isSuccessful' => $successful,
+            'message' => $message
+        )); 
+    }
+
+    
+}

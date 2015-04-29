@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>ASRAMA YPT TELKOM</title>
-<<<<<<< HEAD
-=======
-    
-   <!--  <p> <?=base_url('resource/css'); ?> </p> -->
->>>>>>> adamaulia/master
-
-    <!-- Bootstrap Core CSS -->
-    <link href="<?=base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css">
-	<link href="<?=base_url('assets/css/jquery-ui.min.css'); ?>" rel="stylesheet" type="text/css">
-	<link href="<?=base_url('assets/css/datepicker.css'); ?>" rel="stylesheet" type="text/css">
-
-    <!-- Fonts -->
-    <link href="<?=base_url('assets/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
-	<link href="<?=base_url('assets/css/animate.css'); ?>" rel="stylesheet" />
-    <!-- Squad theme CSS -->
-    <link href="<?=base_url('assets/css/style.css'); ?>" rel="stylesheet">
-	<link href="<?=base_url('assets/color/default.css'); ?>" rel="stylesheet">
-
-</head>
-
+<? $this->load->view('includes/header');?>
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 	<!-- Preloader -->
 	<div id="preloader">
@@ -44,21 +15,15 @@
                     <h1>ASRAMA YPT TELKOM</h1>
                 </a>
             </div>
-	<!-- NAVBAR -->
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#intro">Home</a></li>
         <li><a href="#about">About</a></li>
-		<li><a href="#contact">Contact</a></li>
-		<li><a href="#price">Price</a></li>
-		<li><a href="#gallery">Gallery</a></li>
-		<li><a href="#fasilitas">Fasilitas</a></li>
-		
-		
 		
 		<!-- <li><a href="#service">Service</a></li> --> 
-		
+		<li><a href="#contact">Contact</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservation <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -370,334 +335,8 @@
 				
 		</div>
 	</section>
-	<!-- /Section: contact -->
+	<!-- /Section: services -->
 	
-	<!-- price -->
-	<section id="price" class="home-section text-center bg-gray">
-		
-		<div class="heading-about">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h2>Price</h2>
-					<i class="fa fa-2x fa-angle-down"></i>
-
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-lg-offset-5">
-				<hr class="marginbot-50">
-			</div>
-		</div>
-		
-		
-				
-				<p>
-				
-					<p>
-					1.	Pelanggan berhak mendapatkan tempat penginapan dan fasilitas dengan membayar sejumlah Rp.75,000.-/Orang , Rp.225.000.-/4 orang sekamar 
-					</p>
-					
-					<p>
-					2.	Fasilitas yang didapatkan adalah amenities berupa air mineral 330 ml, sabun mandi dan shampoo perpack perharinya. 
-					</p>
-					<p>
-					3.	Amenities dapat ditukarkan dengan amidis galon apabila :
-						<p> a.	1 orang/kamar menginap = 6 Hari </p>
-						<p> b.	2 orang/kamar menginap = 4 Hari </p>
-						<p> c.	3-4 orang/kamar menginap = 2 Hari </p> 
-
-					</p>
-					
-					<p>
-					
-					4.	Untuk tambahan fasilitas :
-						<p> a.	Selimut, dikenakan biaya tambahan Rp.15,000,-/pcs. </p>
-						<p>b.	Air galon amidis, dikenakan biaya tambahan Rp.14,500,-/pcs. </p>
-
-					</p>
-				</p>
-				
-				
-		</div>
-	</section>
-	
-
-	<!-- gallery -->
-	 <section id="gallery" class="home-section text-center bg-gray">
-		
-		<div class="heading-about">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h2>Fasilitas</h2>
-					<i class="fa fa-2x fa-angle-down"></i>
-
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-lg-offset-5">
-				<hr class="marginbot-50">
-			</div>
-		</div>
-		
-		
-        <div class="row">
-            <div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/61_big.jpg'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>Security</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/62_big.jpg'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>WIFI</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/72_big.jpg'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>KAMAR MANDI DALAM</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/IMG_20141118_190922.jpg') ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>TEMPAT TIDUR SUSUN</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/IMG_20141118_190928.jpg'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>Parkir Luas</h5>
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/images.png'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>Food Court</h5>
-					</div>
-                </div>
-				</div>
-            </div>
-
-        </div>	
-				
-				<!--
-				<p>
-				
-					<p>ASRAMA TELKOM UNIVERSITY </p>
-					<p>Jl. Telekomunikasi Terusan Buah Batu </p>
-					<p>Bandung 40257 Indonesia </p> 
-					<p>Telp: +6222 7564 108 </p>
-					<p>Website: http://dormitory.telkomuniversity.ac.id </p>
-					<p>Email: dormitory@telkomuniversity.ac.id  </p>
-				
-				</p>
-				
-				-->
-				
-		</div>
-	</section>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<!-- Section: fasilitas -->
-    <section id="fasilitas" class="home-section text-center bg-gray">
-		
-		<div class="heading-about">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h2>Fasilitas</h2>
-					<i class="fa fa-2x fa-angle-down"></i>
-
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-lg-offset-5">
-				<hr class="marginbot-50">
-			</div>
-		</div>
-		
-		
-        <div class="row">
-            <div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/security.png'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>Security</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/1000w.png'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>WIFI</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/bathroom-512.png'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>KAMAR MANDI DALAM</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/billet-512.png') ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>TEMPAT TIDUR SUSUN</h5>
-						
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/parkir.jpeg'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>Parkir Luas</h5>
-					</div>
-                </div>
-				</div>
-            </div>
-			
-			<div class="col-xs-14 col-sm-12 col-lg-12">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="service-box">
-					<div class="service-icon">
-						<img src="<?=base_url('assets/gambar/convert/images.png'); ?>" alt="" />
-					</div>
-					<div class="service-desc">
-						<h5>Food Court</h5>
-					</div>
-                </div>
-				</div>
-            </div>
-
-        </div>	
-				
-				<!--
-				<p>
-				
-					<p>ASRAMA TELKOM UNIVERSITY </p>
-					<p>Jl. Telekomunikasi Terusan Buah Batu </p>
-					<p>Bandung 40257 Indonesia </p> 
-					<p>Telp: +6222 7564 108 </p>
-					<p>Website: http://dormitory.telkomuniversity.ac.id </p>
-					<p>Email: dormitory@telkomuniversity.ac.id  </p>
-				
-				</p>
-				
-				-->
-				
-		</div>
-	</section>
 	
 	
 
@@ -725,15 +364,12 @@
 				<hr class="marginbot-50">
 			</div>
 		</div>
-		
-		
-	<div class="col-lg-2"></div>
-    <div class="container">
-        <div class="col-lg-8">
+    <div class="row">
+        <div class="col-lg-12">
             <div class="boxed-grey">
                 <form id="contact-form">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="name">
                                 Name</label>
@@ -757,7 +393,7 @@
 						<!-- date picker-->
 							
 						
-						<!-- 
+						<!-- -->
                         <div class="form-group">
                             <label for="subject">
                                 Subject</label>
@@ -768,46 +404,7 @@
                                 <option value="product">Product Support</option>
                             </select>
                         </div>
-						
-						-->
-						<div class="container">
-						<div class="form-group">
-                            <label for="jumlah">
-                                jumlah</label>
-						</div>		
-						<div class="col-md-2">
-                            <label class="radio-inline">
-								<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 4
-							</label>
-                        </div>
-						
-						</div>
-						<br>
-						
-						<div class="container">
-						
-							<div class="form-group">
-								<label for="dp">
-										tanggal
-								</label>
-							<div class="col-md-2">	
-							<input class="datepicker" type="text" name="date">  <!-- ini mau di isi sama datepicker, tapi masih gagal di javascript nya ,ini yan masih error -->
-							</div>
-
-								</div>
-							
-						</div>
                     </div>
-					<!--
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="name">
@@ -816,17 +413,10 @@
                                 placeholder="Message"></textarea>
                         </div>
                     </div>
-					-->
-					
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
                             Send Message</button>
                     </div>
-					
-					
-					
-					
-					
                 </div>
                 </form>
             </div>
@@ -891,15 +481,12 @@
 				<hr class="marginbot-50">
 			</div>
 		</div>
-	<div class="col-md-3" ></div>	
-    <div class="container">
-		
-        <div class="col-md-6">
-			
+    <div class="row">
+        <div class="col-lg-12">
             <div class="boxed-grey">
                 <form id="contact-form">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
 						 <div class="form-group">
                             <label for="name">
                                 Kode Konfirmasi </label>
@@ -917,15 +504,13 @@
 							</div>
 							
 							-->
-						<br>
+							
 						<div class="form-actions">
 							<input type="submit" name="validate" class="btn btn-info pull-right" value="Submit" id="submit"/>
 						</div>	
-						
 							
                         </div>
-						<br>
-						<br>
+					
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
                         </div>
@@ -938,27 +523,15 @@
 							
 						
 						<!-- -->
-						
-						<div class="form-group">
-						<p class="help-block align-left">Upload Bukti Transfer</p>
-							<label for="exampleInputFile">File input</label>
-									<input type="file" id="exampleInputFile">
-									
-						</div>
                     </div>
-                    
-					<!--
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="name">
                                 Message</label>
                             <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
                                 placeholder="Message"></textarea>
                         </div>
-						-->
-						
-						
-						
-                    
+                    </div>
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
                             Send Message</button>
@@ -1004,7 +577,25 @@
 	</section>
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<!-- /Section: contact -->
 
@@ -1031,15 +622,8 @@
     <script src="<?=base_url('assets/js/jquery.easing.min.js'); ?>"></script>	
 	<script src="<?=base_url('assets/js/jquery.scrollTo.js'); ?>"></script>
 	<script src="<?=base_url('assets/js/wow.min.js'); ?>"></script>
-	<script src="<?=base_url('assets/js/jquery-ui.min.js'); ?>"></script>
-	<script src="<?=base_url('assets/js/bootstrap-datepicker.js'); ?>"></script>
     <!-- Custom Theme JavaScript -->
     <script src="<?=base_url('assets/js/custom.js'); ?>"></script>
-	 <script>
-			$(function(){
-			 $('.datepicker').datepicker();
-			});
-	</script>
 
 </body>
 

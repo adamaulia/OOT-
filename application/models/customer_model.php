@@ -11,8 +11,15 @@
 
 		function update_booking($id, $data){
 		  	$this->load->library('upload');
-		   	$this->db->where('id_customer');
+		  	//$query = "update customer set gambar = $data where id_customer = '$id' ";
+		   	$this->db->where('id_customer',$id);
 		  	$this->db->update('customer',$data);
+
+		  	//$this->db->query;
+
+		}
+
+		function insert_image($id, $data){
 
 		}
 

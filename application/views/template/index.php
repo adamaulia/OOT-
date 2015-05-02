@@ -729,12 +729,12 @@
                         <div class="form-group">
                             <label for="ktp">
                                 No.KTP</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" name="ktp" />
+                            <input type="text" class="form-control" id="KTP" placeholder="Enter Nomor KTP" required="required" name="ktp" />
                         </div>
                         <div class="form-group">
                             <label for="address">
                                 Alamat </label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" name="alamat" />
+                            <input type="text" class="form-control" id="Alamat" placeholder="Enter Alamat" required="required" name="alamat" />
                         </div>
                         
 
@@ -773,7 +773,7 @@
 						<div class="form-group">
                             
 						</div>		
-						<div class="col-md-2" >
+						<div class="col-md-7" >
 							<label for="jumlah" >
                                 jumlah orang</label>
                                 <br>
@@ -790,8 +790,40 @@
 								<input type="radio" name="jumlah" id="inlineRadio3" value="4"> 4
 							</label>
                         </div>
-						
 						</div>
+					</br>
+					</br>
+					</br>
+
+					<div class="container">
+					<div class="col-md-7" >
+					<label for="fasilitas" >
+                                <h5><center>Fasilitas Tambahan</center></h6></label>
+                    </div>
+					</div>
+
+						<div class="container">
+						<div class="form-group">
+						<div class="col-md-7" >
+                            <label for="selimut" >
+                                selimut</label>
+                                <br>
+                            <label class="radio-inline">
+								<input type="radio" name="selimut" id="inlineRadio1" value="1"> 1
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="selimut" id="inlineRadio2" value="2"> 2
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="selimut" id="inlineRadio3" value="3"> 3
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="selimut" id="inlineRadio3" value="4"> 4
+							</label>
+                        </div>
+                        </div>
+                    	</div>
+
 						<br>
 						
 						<div class="container">

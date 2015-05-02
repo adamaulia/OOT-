@@ -9,7 +9,7 @@
 
 	<?php 
 
-		foreach ($upload_data as $k => $v) 
+		foreach ($Data as $k => $v) 
 		{
 			echo "<br/>" .$k. "=>" .$v;
 		}

@@ -8,7 +8,7 @@ public function __construct(){
 		$this->load->helper(array('form','url'));
 		$this->load->library('input');
 		//$this->load->view('template/index');
-		//$this->load->model('customer_model');
+		$this->load->model('customer_model');
 	}
 
 public function addBooking(){
@@ -70,81 +70,62 @@ public function cek_booking(){
 
 public function hitung(){
 	$jum=$this->input->post('jumlah');
+	$SumJumlah = $jum * 75000;
+	$selimut=$this->input->post('selimut');
+	$SumSelimut = $selimut * 15000;
 	// if (($data == 1 ) or ($data == 2) or( $data == 3) )  {
 	// 	return $hasil = $data * 75000;
 	// }
 
-	return $jum * 75000 ;
+	return $SumJumlah + $SumSelimut ;
 
 }
 
 
-public function uploadIMG(){
-// 	echo " tes Upload ";
+public function do_upload(){
 
-// 	$type = explode('.', $_FILES["gambar"]["name"]);
-// 	$type = strtolower($type[count($type)-1]);
-// 	$url = "./file/".uniqid(rand()).'.'.$type;
-// 	if(in_array($type, array("jpg", "jpeg", "gif", "png")))
-// 			if(is_uploaded_file($_FILES["pic"]["tmp_name"]))
-// 				if(move_uploaded_file($_FILES["gambar"]["tmp_name"],$url))
-// 					return $url;
-// 		return "";
-// }
 
-	   $config['upload_path']   =   './imgUpload/';
- 	   $config['allowed_types'] =   'gif|jpg|jpeg|png'; 
- 	   $config['max_size']      =   '5000';
- 	   $config['max_width']     =   '4000';
- 	   $config['max_height']    =   '3000';
+	// $this->load->helper('form');
+
+	//    $config['upload_path']   =   './imgUpload/';
+ // 	   $config['allowed_types'] =   'gif|jpg|jpeg|png'; 
+ // 	   $config['max_size']      =   '5000';
+ // 	   $config['max_width']     =   '4000';
+ // 	   $config['max_height']    =   '3000';
  
-       $this->load->library('upload',$config);
+ //       $this->load->library('upload',$config);
 	   
 
-       if( ! $this->upload->do_upload())
+ //       if( ! $this->upload->do_upload())
 
-       {
+ //       {
 
-       	   $error = array('error' => $this->upload->display_errors());
-           $this->load->view('template/successUpload', $error);
+ //       	   $error = array('error' => $this->upload->display_errors());
+ //           $this->load->view('template/successUpload', $error);
 
-       }
-       else
+ //       }
+ //       else
 
-       {
+ //       {
 
-     //       $finfo=$this->upload->data();
-		   // $this->_createThumbnail($finfo['file_name']);
-		   // $data['uploadInfo'] = $finfo;
-		   // $data['thumbnail_name'] = $finfo['raw_name']. '_thumb' .$finfo['file_ext']; 
-		   // $this->load->view('upload_success',$data);
+ //       	$data = array('upload_data'=> $this->upload->data());
 
-       	$data = array('upload_data'=> $this->upload->data());
-
-       	$this->load->view('template/successUpload', $data);
+ //       	$this->load->view('template/successUpload', array('Data' =>$data));
 
 
 
-           // You can view content of the $finfo with the code block below
+ //       }
 
-           /*echo '<pre>';
+		$type = explode('.', $_FILES["pic"]["name"]);
+		$type = $type[count($type)-1];
+		$url = "./imgUpload/".$_FILES["pic"]["name"];
+		if(in_array($type, array("jpg","jpeg","gif","png")))
+			if(is_uploaded_file($_FILES["pic"]["tmp_name"]))
+				if(move_uploaded_file($_FILES["pic"]["tmp_name"],$url));
 
-           print_r($finfo);
+				return $url;
+			return "";
 
-           echo '</pre>';*/
-
-       }
-
-
-  //      if (!$this->upload->do_upload('image')) {
-		// 	$data = array('msg' => $this->upload->display_errors());
-
-		// } else { //else, set the success message
-		// 	$data = array('msg' => "Upload success!");
-      
-  //     $data['upload_data'] = $this->upload->data();
-
-		// }
 
 	}
 
@@ -152,7 +133,13 @@ public function uploadIMG(){
 
 
 public function save(){
-	$url = $this->upload;
+	$this->load->model('customer_model');
+	$id = $_POST['id'];
+	echo "hasil id model ".$id;
+	$url=$this->do_upload();
+	echo "url = " .$url;
+	$this->customer_model->update_booking($id,$url);
+
 }
 
 

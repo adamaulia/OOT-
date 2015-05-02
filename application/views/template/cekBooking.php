@@ -82,54 +82,35 @@
         	<br />
  
 
-          <?php echo form_open_multipart('booking/uploadIMG')?>   
+          <?php echo " cek id ".$id?> 
+          <?php echo form_open_multipart('booking/save/')?>   
 
-						<p class="help-block align-left">Upload Bukti Transfer</p>
+<!-- 						<p class="help-block align-left">Upload Bukti Transfer</p>
 							<label for="exampleInputFile">File input</label>
 									<input type="file" id="gambar" name="image" />
                   <br>
-                <!--   <input class="btn  btn-sm pull-left" id="upload" type="submit" placeholder="upload" name="upload" id="upload" /> -->
                 <input type="submit"   name="image" class="btn btn-info pull-left"  value="Upload" id="upload"/>
 
-							</form>		
-
+							</form>		 -->
             
+            <table class="table">
+                <tr>
+                    <td>Upload Bukti Pembayaran</td>
+                    <td><input type="hidden" value="<?php echo $id ?>" name="id" />  </td>
+                </tr> 
+                <tr>
+                    <td>Image</td>
+                    <td><?php echo form_upload('pic'); ?></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><?php echo form_submit('submit','save','class=btn btn-primary'); ?></td>
+                </tr>
 
-<!--   		<div class="upload_file">
-           <div class="form-group">
-                <div class="col-md-6 column">
-                     <div class="form-group">
-                             <label for="userfile"><h5>Attachment File Upload</h5></label>
-                                  <br>
-                                       <label for="title">Title</label>
-                                       <input class="form-control" type="text" name="title" id="title" value="" placeholder="Attachment title"/>
-                                            </div>
-                                        <input type="file" name="userfile" id="userfile" size="20" />
-                                           <button class="btn btn-success btn-sm pull-right" id="upload" type="button" name="upload" id="upload" >upload</button>
-                                           <br>
-                              </div>
-                          <div class="col-md-6 column">
-                          <label for="userfile"><h5>uploaded file</h5></label>
-                          <div id="files"></div>
-                                                  
-                            </div>
-                      </div>
-             </div>	
- -->
-<!--          <table class="table">
-        <tr>
-            <td>Title</td>
-            <td><?php echo form_input('title'); ?></td>
-        </tr>
-        <tr>
-            <td>Image</td>
-            <td><?php echo form_upload('pic'); ?></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><?php echo form_submit('submit', 'Save', 'class="btn btn-primary"'); ?></td>
-        </tr>       
-        </table> -->
+
+            </table>  
+
+
 
     	</div>
 

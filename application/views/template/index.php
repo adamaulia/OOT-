@@ -51,6 +51,7 @@
 		<li><a href="#price">Price</a></li>
 		<li><a href="#gallery">Gallery</a></li>
 		<li><a href="#fasilitas">Fasilitas</a></li>
+		<li><a href="#panduan">Panduan</a></li>
 		
 		
 		
@@ -685,7 +686,147 @@
 		</div>
 	</section>
 	
+
+
+	<!-- Panduan  -->
+	<section id="panduan" class="home-section text-center bg-gray">
+		
+		<div class="heading-about">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="wow bounceInDown" data-wow-delay="0.4s">
+					<div class="section-heading">
+					<h2>Panduan</h2>
+					<i class="fa fa-2x fa-angle-down"></i>
+
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-5">
+				<hr class="marginbot-50">
+			</div>
+		</div>
+		
+		
+        <div class="row">
+            <div class="col-xs-14 col-sm-12 col-lg-12">
+				<div class="wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="service-box">
+					<div class="service-icon">
+						<img src="<?=base_url('assets/gambar/convert/1_1.jpg'); ?>" alt="" />
+					</div>
+					<div class="service-desc">
+						<h5>1. Pada Halaman Utama, Klik Nav Bar “Reservation” -> Klik “Booking”</h5>
+						
+					</div>
+                </div>
+				</div>
+            </div>
+
+			<div class="col-xs-14 col-sm-12 col-lg-12">
+				<div class="wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="service-box">
+					<div class="service-icon">
+						<img src="<?=base_url('assets/gambar/convert/1_2.jpg'); ?>" alt="" />
+					</div>
+					<div class="service-desc">
+						<h5>2. Setelah mengklik “Booking”, isi seluruh data pada form->Klik booking</h5>
+						
+					</div>
+                </div>
+				</div>
+            </div>
+			
+			<div class="col-xs-14 col-sm-12 col-lg-12">
+				<div class="wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="service-box">
+					<div class="service-icon">
+					<!--	<img src="<?=base_url('assets/gambar/convert/bathroom-512.png'); ?>" alt="" /> -->
+					</div>
+					<div class="service-desc">
+						<h5>3. Kemudian akan muncul “Pop Up” bahwa anda telah terdaftar dan anda akan diinstruksikan untuk melakukan pembayaran. Tata cara pembayaran dapat dilihat pada Nav Bar “Tata Cara Pembayaran”.</h5>
+						
+					</div>
+                </div>
+				</div>
+            </div>
+			
+			
+			<div class="col-xs-14 col-sm-12 col-lg-12">
+				<div class="wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="service-box">
+					<div class="service-icon">
+						<!-- <img src="<?=base_url('assets/gambar/convert/billet-512.png') ?>" alt="" /> -->
+					</div>
+					<div class="service-desc">
+						<h5>4. Setelah melakukan pembayaran dan menghubungi pihak CSM untuk meminta kode konfirmasi, anda akan mendapatkan kode konfirmasi yang dapat diinputkan dengan membuka Nav Bar “Reservasi” -> “Cek Booking”.</h5>
+						
+					</div>
+                </div>
+				</div>
+            </div>
+			
+			<div class="col-xs-14 col-sm-12 col-lg-12">
+				<div class="wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="service-box">
+					<div class="service-icon">
+						<img src="<?=base_url('assets/gambar/convert/1_3.png'); ?>" alt="" />
+					</div>
+					<div class="service-desc">
+						<h5>5.Inputkan kode konfirmasi dan anda akan masuk pada halaman</h5>
+					</div>
+                </div>
+				</div>
+            </div>	
+			
+			<div class="col-xs-14 col-sm-12 col-lg-12">
+				<div class="wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="service-box">
+					<div class="service-icon">
+						<img src="<?=base_url('assets/gambar/convert/1_4.png'); ?>" alt="" />
+					</div>
+					<div class="service-desc">
+						<h5>6. Maka akan terlihat spesifikasi pemesanan, lakukan upload bukti pembayaran.</h5>
+					</div>
+                </div>
+				</div>
+            </div>
+
+            <div class="col-xs-14 col-sm-12 col-lg-12">
+				<div class="wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="service-box">
+					<div class="service-icon">
+						<!-- <img src="<?=base_url('assets/gambar/convert/images.png'); ?>" alt="" /> -->
+					</div>
+					<div class="service-desc">
+						<h5>7. Setelah melakukan upload, silahkan hubungi pihak CSM untuk verifikasi pembayaran. </h5>
+					</div>
+                </div>
+				</div>
+            </div>
+
+            <h5><center><a href="<?php echo ('booking/panduan');?>"> Download Panduan PDF </a></center></h5>
+
+        </div>	
+				
+		</div>
+	</section>
 	
+
+
+
+
+
+
+
+
+
 
 	<!-- Section: Booking -->
     <section id="Booking" class="home-section text-center">
@@ -983,16 +1124,8 @@
                                 placeholder="Message"></textarea>
                         </div>
 						-->
-						
-						
-					
-                    
 
                 </div>
-                
-                
-
-
             </div>
         </div>
 		

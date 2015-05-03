@@ -130,12 +130,6 @@ public function do_upload(){
 	}
 
 
-public function panduan(){
-	header("Content-disposition: attachment; filename=panduan.pdf");
-	header("Content-type: application/pdf");
-	readfile("panduan.pdf");
-}
-
 
 public function save(){
 	$this->load->model('customer_model');

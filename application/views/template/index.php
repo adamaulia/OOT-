@@ -811,7 +811,7 @@
 				</div>
             </div>
 
-            <h5><center><a href="<?php echo ('booking/panduan');?>"> Download Panduan PDF </a></center></h5>
+            <h5><center><a href="<?php echo base_url('assets/panduan.pdf'); ?>"> Download Panduan PDF </a></center></h5>
 
         </div>	
 				

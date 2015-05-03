@@ -16,8 +16,8 @@
 </head>
 <body>
 
- 	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-      <ul class="nav navbar-nav">
+ 	<div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+      <ul class="nav navbar-nav nav-pills">
         <li class="active"><a href="<?php echo site_url('booking');?>">Home</a></li>
         <!-- <li><a href="#about">About</a></li>
 		<li><a href="#contact">Contact</a></li>
@@ -31,8 +31,8 @@
             <li><a href="#CekBooking">Cek Booking</a></li>
 				<li><a href="#">Example menu</a></li> 
           </ul>
-        </li>
-      </ul> -->
+        </li> -->
+      </ul> 
      </div> 
 	<div class="container">
 		<div class="col-lg-10">
@@ -92,7 +92,7 @@
                 <input type="submit"   name="image" class="btn btn-info pull-left"  value="Upload" id="upload"/>
 
 							</form>		 -->
-            
+
             <table class="table">
                 <tr>
                     <td>Upload Bukti Pembayaran</td>
@@ -104,11 +104,19 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><?php echo form_submit('submit','save','class=btn btn-primary'); ?></td>
+                    <td><?php echo form_submit('submit','save','class=btn btn-primary data-toggle="modal" data-target=".bs-example-modal-sm"'); ?></td>
                 </tr>
 
 
             </table>  
+
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <h5><center> Terima kasih </center></h5>
+                    </div>
+                </div>
+          </div>
 
 
 
@@ -187,4 +195,13 @@
 });
 </script>
  -->
+  <script src="<?=base_url('assets/js/jquery.min.js'); ?>"></script>
+  <script src="<?=base_url('assets/js/bootstrap.min.js'); ?>"></script>
+  <script src="<?=base_url('assets/js/jquery.easing.min.js'); ?>"></script> 
+  <script src="<?=base_url('assets/js/jquery.scrollTo.js'); ?>"></script>
+  <script src="<?=base_url('assets/js/wow.min.js'); ?>"></script>
+  <script src="<?=base_url('assets/js/jquery-ui.min.js'); ?>"></script>
+  <script src="<?=base_url('assets/js/bootstrap-datepicker.js'); ?>"></script>
+
+
 </html>

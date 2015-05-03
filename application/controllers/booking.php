@@ -138,8 +138,10 @@ public function save(){
 	echo "hasil id model ".$id;
 	$url=$this->do_upload();
 	echo "url = " .$url;
-	$this->customer_model->update_booking($id,$url);
-
+	$data['gambar']=$url;
+	$this->customer_model->update_booking($id,$data);
+	//$this->load->view('template/index');
+	redirect(site_url('login'));
 }
 
 

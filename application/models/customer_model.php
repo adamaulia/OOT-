@@ -12,8 +12,14 @@
 		function update_booking($id, $data){
 		  	$this->load->library('upload');
 		  	//$query = "update customer set gambar = $data where id_customer = '$id' ";
-		   	$this->db->where('id_customer',$id);
-		  	$this->db->update('customer',$data);
+		  	//$data= array('gambar'=>$data);
+		  	//$where = "id_customer = '$id' ";
+		  	
+		   	 $this->db->where('id_customer',$id);
+		  	 $this->db->update('customer',$data);
+
+		  	//$str = $this->db->update_string('customer',$data,$where);
+
 
 		  	//$this->db->query;
 
